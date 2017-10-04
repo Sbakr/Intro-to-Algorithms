@@ -1,0 +1,22 @@
+var swap = function(array, firstIndex, secondIndex) {
+    var holding = array[firstIndex];
+	array[firstIndex] = array[secondIndex];
+	array[secondIndex] = holding;
+};
+
+var testArray = [7, 9, 4];
+
+//change first and second number then checks with program
+swap(testArray, 0, 1);
+println(testArray);
+Program.assertEqual(testArray, [9, 7, 4]);
+
+//changes third and first number then checks with program
+swap(testArray, 2, 0);
+println(testArray);
+Program.assertEqual(testArray, [4, 7, 9]);
+
+//changes second and third number then checks with program
+swap(testArray, 1, 2);
+println(testArray);
+Program.assertEqual(testArray, [4, 9, 7]);
