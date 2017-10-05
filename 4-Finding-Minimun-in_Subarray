@@ -1,0 +1,39 @@
+// this is the swapper for when selection sort finds a smaller answer
+var swap = function(array, firstIndex, secondIndex) {
+    var temp = array[firstIndex]; 
+    array[firstIndex] = array[secondIndex]; 
+    array[secondIndex] = temp; 
+};
+
+//this is the checking for smaller answer
+var indexOfMinimum = function(array, startIndex) {
+    var minValue = array[startIndex]; 
+    var minIndex = startIndex; 
+    for(var i = minIndex + 1 ; i < array.length; i++) {
+        if(array[i] < minValue) { 
+            minIndex = i; 
+            minValue = array[i]; 
+        }
+    } 
+    return minIndex;
+}; 
+
+//this is the continuous loop for getting the checks
+var selectionSort = function(array) {
+    var min;
+    for(var i = 0; i < array.length; i++) {
+        min = indexOfMinimum(array, i);
+        swap(array, i, min);
+    }
+};
+
+var array = [22, 11, 99, 88, 9, 7, 42];
+selectionSort(array);
+println("hi");
+println("Array after sorting:  " + array);
+
+Program.assertEqual(array, [7, 9, 11, 22, 42, 88, 99]);
+
+var array2 = [30, 13, 53, 23, 2, 9, 0];
+selectionSort(array2);
+Program.assertEqual(array2, [0, 2, 9, 13, 23, 30, 53]);
