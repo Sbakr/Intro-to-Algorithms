@@ -1,3 +1,6 @@
+
+<img width="443" alt="screen shot 2017-10-11 at 10 18 35 pm" src="https://user-images.githubusercontent.com/31697395/31476029-3bcbbf74-aed2-11e7-8c62-0d51548ed19c.png">
+
 //set background for colours
 background(32, 33, 77);
     var x = 50; var y = 20;
