@@ -5,7 +5,7 @@
 background(32, 33, 77);
     var x = 50; var y = 20;
 
-//displays the numbers and circles
+//displays the numbers and circles  
 var displayArray = function(array, min, swatching) {
     stroke(0, 0, 0);
     textSize(15);
@@ -16,7 +16,7 @@ var displayArray = function(array, min, swatching) {
             stroke(224, 38, 38);
             noFill();
             ellipse(x-22,y-25,20,20);
-        }
+        }  
         
         if (array[i] === swatching) {
             stroke(212, 149, 32);
@@ -28,14 +28,14 @@ var displayArray = function(array, min, swatching) {
     x=50;
 };
 
-//swaps the placements to get the lower number come first
+//swaps the placements to get the lower number come first  
 var swap = function(array, firstIndex, secondIndex) {
     var temp = array[firstIndex]; 
     array[firstIndex] = array[secondIndex]; 
     array[secondIndex] = temp;
-};
+};  
 
-//finds the smallest number in the array
+//finds the smallest number in the array  
 var indexOfMinimum = function(array, startIndex) {
     var minValue = array[startIndex]; 
     var minIndex = startIndex; 
@@ -48,14 +48,14 @@ var indexOfMinimum = function(array, startIndex) {
     return minIndex;
 }; 
 
-//makes sure that there are no smaller numbers in array
+//makes sure that there are no smaller numbers in array  
 var selectionSort = function(array) {
     var min;
     for(var i = 0; i < array.length; i++) {
-        //println(min);
-        //println(array[min]);
-        //println("HEYYYYYY");
-        //println(i);
+        //println(min);  
+        //println(array[min]);  
+        //println("HEYYYYYY");  
+        //println(i);  
         var swatching = array[i];
         //println(swatching);
         displayArray(array, min, swatching);
@@ -65,7 +65,7 @@ var selectionSort = function(array) {
     }
 };
 
-//assertions and startup arrays
+//assertions and startup arrays  
 var array = [22, 11, 99, 9, 88];
 selectionSort(array);
 Program.assertEqual(array, [9, 11, 22, 88, 99]);
