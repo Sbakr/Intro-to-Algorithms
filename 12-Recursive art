@@ -23,5 +23,3 @@ var drawShape = function(x, y, radius) {
 
 //calling functions
 drawShape(width/2, height/2, 395);
-drawShape(width/2, height/2, 285);
-drawShape(width/2, height/2, 190);
