@@ -1,6 +1,9 @@
 var drawShape = function(x, y, radius) {
-    var randomNumber=round(random(1,3));
+    //randomizing shape
+    var randomNumber=round(random(1,2));
+    //randomizing colour each layer
     fill(random(0,255), random(0,255), random(0,255));
+    //if starement
     if(randomNumber===1){
     ellipse(x, y, radius, radius);
     
@@ -9,11 +12,8 @@ var drawShape = function(x, y, radius) {
     rect(x, y, x, y);
     
     }
-    else{
-    triangle(x, y, x+1, y+1,x-1,y-1);
     
-    }
-    
+    //allowing pattern to continue to end of canvas
     var newRadius = radius/2;
     if (newRadius >= 2) {
         drawShape(x, y, newRadius);
@@ -21,6 +21,7 @@ var drawShape = function(x, y, radius) {
     }
 };
 
+//calling functions
 drawShape(width/2, height/2, 395);
 drawShape(width/2, height/2, 285);
 drawShape(width/2, height/2, 190);
