@@ -1,3 +1,7 @@
+![recursive art](https://user-images.githubusercontent.com/31697395/35227560-6fe30a3a-ff5c-11e7-95ba-a6a2d293a07e.gif)
+
+By using random numbers and if statements to create chance for each shape I created art using circles and squares.
+
 var drawShape = function(x, y, radius) {
     //randomizing shape
     var randomNumber=round(random(1,2));
